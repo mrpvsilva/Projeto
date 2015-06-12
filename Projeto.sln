@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanic system", "Projeto\Mechanic system.csproj", "{2896B689-5C4F-4FDC-A2F2-4312E1ACB8CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{2CEC4B41-9BD6-4B7D-98FB-3EB3D33C0770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource", "DataSource\DataSource.csproj", "{D2C7466D-F62C-4F41-8662-E9E8D5CD901B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2896B689-5C4F-4FDC-A2F2-4312E1ACB8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2896B689-5C4F-4FDC-A2F2-4312E1ACB8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2896B689-5C4F-4FDC-A2F2-4312E1ACB8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2896B689-5C4F-4FDC-A2F2-4312E1ACB8CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEC4B41-9BD6-4B7D-98FB-3EB3D33C0770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEC4B41-9BD6-4B7D-98FB-3EB3D33C0770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEC4B41-9BD6-4B7D-98FB-3EB3D33C0770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEC4B41-9BD6-4B7D-98FB-3EB3D33C0770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C7466D-F62C-4F41-8662-E9E8D5CD901B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C7466D-F62C-4F41-8662-E9E8D5CD901B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C7466D-F62C-4F41-8662-E9E8D5CD901B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C7466D-F62C-4F41-8662-E9E8D5CD901B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
