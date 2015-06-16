@@ -125,12 +125,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FuncionariosController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="fonts\Controllers\AccountController.cs" />
+    <Compile Include="fonts\Controllers\FuncionariosController.cs" />
+    <Compile Include="fonts\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FiltroUsuarioViewModel.cs" />
     <Compile Include="Models\GrupoUsuarioViewModel.cs" />
     <Compile Include="Models\UsuarioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -309,6 +310,10 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Funcionarios\Index.cshtml" />
     <Content Include="Views\Funcionarios\Novo.cshtml" />
+    <Content Include="Views\Funcionarios\Alterar.cshtml" />
+    <Content Include="Views\Funcionarios\Visualizar.cshtml" />
+    <Content Include="Views\Funcionarios\Excluir.cshtml" />
+    <Content Include="Views\Funcionarios\_Filtro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

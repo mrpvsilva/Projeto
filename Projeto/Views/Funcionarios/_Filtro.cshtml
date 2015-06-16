@@ -1,0 +1,33 @@
+﻿@model Projeto.Models.FiltroUsuarioViewModel
+
+<style>
+    #pesquisar {
+        margin: 10px;
+    }
+
+    .field {
+        width: 30%;
+        display: inline-block;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    <div id="pesquisar">
+        <div class="field">
+            <label>Pesquisa</label>
+            @Html.EditorFor(x => x.Pesquisa)
+
+        </div>
+        <div class="field">
+            <label>Grupo</label>
+            @Html.DropDownListFor(model => model.Grupo, Model.Grupos)
+
+        </div>
+        <div class="field">
+            <input type="submit" value="Pesquisar" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+

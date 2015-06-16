@@ -1,10 +1,11 @@
-﻿@model IEnumerable<Dominio.Models.Usuario>
+﻿@using Projeto.Models
+@model IEnumerable<Dominio.Models.Usuario>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@{ Html.RenderPartial("_Filtro", new FiltroUsuarioViewModel()); }
 
 <p>
     @Html.ActionLink("Novo", "Novo")
@@ -39,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.GrupoUsuario.Descricao)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.IdUsuario }) |
-                @Html.ActionLink("visualizar", "Details", new { id = item.IdUsuario }) |
-                @Html.ActionLink("Excluir", "Delete", new { id = item.IdUsuario })
+                @Html.ActionLink("Editar", "Alterar", new { id = item.IdUsuario }) |
+                @Html.ActionLink("Visualizar", "Visualizar", new { id = item.IdUsuario }) |
+                @Html.ActionLink("Excluir", "Excluir", new { id = item.IdUsuario })
             </td>
         </tr>
     }
