@@ -128,6 +128,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -314,6 +315,7 @@
     <Content Include="Views\Funcionarios\Visualizar.cshtml" />
     <Content Include="Views\Funcionarios\Excluir.cshtml" />
     <Content Include="Views\Funcionarios\_Filtro.cshtml" />
+    <Content Include="Views\Servico\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

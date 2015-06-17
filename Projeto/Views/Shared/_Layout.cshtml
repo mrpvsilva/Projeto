@@ -1,4 +1,6 @@
-﻿@using Projeto.Util
+﻿@using System
+@using Projeto.Util
+@{ var user = Sessions.Usuario;}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @{ var usuario = Sessions.Usuario;}
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,13 +25,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Ordem de serviços", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Orçamentos", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Veiculos", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Funcionarios", "Index", "Funcionarios")</li>
+                    <li>@Html.ActionLink("Ordem de serviços", "Index", "Servico")</li>
+                    @{
+                        var grupo = user.GrupoUsuario.Descricao;
+                        if (grupo.Equals("Administrador") || grupo.Equals("Gerente") || grupo.Equals("Funcionario"))
+                        {
+                            <li>@Html.ActionLink("Funcionarios", "Index", "Funcionarios")</li>
+                        }
+                    }
                     <li role="presentation" class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                            @usuario.Login<span class="caret"></span>
+                            @user.Login<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>@Html.ActionLink("Sair", "Sair", "Account")</li>

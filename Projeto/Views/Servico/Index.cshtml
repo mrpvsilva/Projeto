@@ -1,0 +1,46 @@
+﻿@model System.Collections.Generic.IEnumerable<Dominio.Models.OrdemServico>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Entrada
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            Veículo
+        </th>
+        <th>
+            Saída
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Veiculo.Modelo + "" + item.Veiculo.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSaida)
+            </td>
+            <td>
+                @* @Html.ActionLink("Edit", "Edit", new { id=item.IdOrdemServico }) |*@
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.IdOrdemServico }) |
+                @* @Html.ActionLink("Delete", "Delete", new { id=item.IdOrdemServico })*@
+            </td>
+        </tr>
+    }
+
+</table>

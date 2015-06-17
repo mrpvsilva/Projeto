@@ -1,4 +1,4 @@
-﻿@model Projeto.Models.UsuarioViewModel
+﻿@model Dominio.Models.Usuario
 
 @{
     ViewBag.Title = "Login";
@@ -24,9 +24,6 @@
         <div class="form-horizontal">
             <h4>Entrar</h4>
             <hr />
-
-
-
             <div class="form-group">
                 @Html.LabelFor(model => model.Login, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">

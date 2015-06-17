@@ -52,9 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infra\Context\MyDbContext.cs" />
-    <Compile Include="Migrations\201506120030078_Inicio.cs" />
-    <Compile Include="Migrations\201506120030078_Inicio.Designer.cs">
-      <DependentUpon>201506120030078_Inicio.cs</DependentUpon>
+    <Compile Include="Migrations\201506170240432_Inicio.cs" />
+    <Compile Include="Migrations\201506170240432_Inicio.Designer.cs">
+      <DependentUpon>201506170240432_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506170243426_Inicio1.cs" />
+    <Compile Include="Migrations\201506170243426_Inicio1.Designer.cs">
+      <DependentUpon>201506170243426_Inicio1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +77,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201506120030078_Inicio.resx">
-      <DependentUpon>201506120030078_Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201506170240432_Inicio.resx">
+      <DependentUpon>201506170240432_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506170243426_Inicio1.resx">
+      <DependentUpon>201506170243426_Inicio1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

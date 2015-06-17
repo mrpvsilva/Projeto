@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\GrupoUsuario.cs" />
+    <Compile Include="Models\OrdemServico.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
