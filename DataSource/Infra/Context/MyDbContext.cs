@@ -3,6 +3,8 @@
 using System.Data.Entity;
 using Dominio.Models;
 using System;
+using System.Data.Entity.ModelConfiguration.Conventions;
+
 namespace DataSource.Infra.Context
 {
     public class MyDbContext : DbContext, IDisposable
@@ -17,13 +19,10 @@ namespace DataSource.Infra.Context
         public MyDbContext()
             : base("MyDb")
         {
-            
+
         }
 
-        public override void OnModelCreating(DbModelBuilder builder)
-        {
-            
-        } 
+        
 
     }
 }

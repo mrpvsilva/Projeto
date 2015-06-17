@@ -1,3 +1,5 @@
+using Dominio.Models;
+
 namespace DataSource.Migrations
 {
     using System;
@@ -14,18 +16,24 @@ namespace DataSource.Migrations
 
         protected override void Seed(DataSource.Infra.Context.MyDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.GrupoUsuarios.AddOrUpdate(new GrupoUsuario[]
+            {
+                new GrupoUsuario { Descricao = "Administrador" },
+                new GrupoUsuario{Descricao = "Gerente"},
+                new GrupoUsuario{Descricao = "Funcionario"},
+                new GrupoUsuario{Descricao = "Cliente"}
+            });
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Usuarios.AddOrUpdate(new Usuario[]
+            {
+                new Usuario { Nome = "Admin", Senha = "123456", Login = "admin", IdGrupoUsuario = 1 },
+                new Usuario { Nome = "Gerente", Senha = "123456", Login = "gerente", IdGrupoUsuario = 2 },
+                new Usuario { Nome = "Funcionario", Senha = "123456", Login = "funcionario", IdGrupoUsuario = 3 },
+                new Usuario { Nome = "Cliente", Senha = "123456", Login = "cliente", IdGrupoUsuario = 4 },
+                
+            });
+
+
         }
     }
 }
